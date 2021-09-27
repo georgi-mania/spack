@@ -28,7 +28,7 @@ unset IFS
 # This is an array of environment variables that need to be set before
 # the script runs. They are set by routines in spack.build_environment
 # as part of the package installation process.
-parameters="\
+params="\
 SPACK_ENV_PATH
 SPACK_DEBUG_LOG_DIR
 SPACK_DEBUG_LOG_ID
@@ -139,7 +139,7 @@ system_dir() {
     return 1  # fail if path starts no system prefix
 }
 
-for param in $parameters; do
+for param in $params; do
     if [ "${param=unset}" = unset ]; then
         die "Spack compiler must be run from Spack! Input '$param' is missing."
     fi
