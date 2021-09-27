@@ -149,7 +149,7 @@ def check_env_var(executable, var, expected):
     """
     with set_env(SPACK_TEST_COMMAND='dump-env-' + var):
         output = executable(*test_args, output=str).strip()
-        assert output == executable.path + ': ' + var + ': ' + expected
+        assert executable.path + ': ' + var + ': ' + expected == output
 
 
 def dump_mode(cc, args):
