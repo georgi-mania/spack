@@ -19,7 +19,7 @@ from spack.util.executable import Executable
 # Complicated compiler test command
 #
 test_args = [
-    '-I/test/include', '-L/test/lib', '-L/other/lib', '-I/other/include',
+    '-I/test/include', '-L/test/lib', '-L/with space/lib', '-I/other/include',
     'arg1',
     '-Wl,--start-group',
     'arg2',
@@ -43,7 +43,7 @@ test_include_paths = [
     '-I/test/include', '-I/other/include']
 
 test_library_paths = [
-    '-L/test/lib', '-L/other/lib']
+    '-L/test/lib', '-L/with space/lib']
 
 test_wl_rpaths = [
     '-Wl,-rpath,/first/rpath', '-Wl,-rpath,/second/rpath',
